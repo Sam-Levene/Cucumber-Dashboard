@@ -6,9 +6,15 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
 	results = connection.query("SELECT tr.id AS ID, s.scenario_name AS Name, tr.passed As PassedFailed, s.failure_rate AS FailureRate FROM scenario_test_runs tr, scenarios s WHERE s.id = tr.scenario_id")
 
 	myItems = results.map do |row|
+		if row['PassedFailed'].to_s == "1" 
+			passorfail = "Pass"
+			else
+				passorfail ="Fail"
+		end
+
 		row = {
 			:label => row['ID'],
-			:value => "Test ID: " << row['ID'].to_s << " Scenario Name: " << row['Name'].to_s << " Test Passed/Failed: " << row['PassedFailed'].to_s << " Failure Rate: " << row['FailureRate'].to_s
+			:value => " File: " << row['File'].to_s << "Test ID: " << row['ID'].to_s << " Scenario Name: " << row['Name'].to_s << " Test Passed/Failed: " << passorfail << " Failure Rate: " << row['FailureRate'].to_s << "%"
 		}
 	end
 
