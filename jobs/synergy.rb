@@ -1,6 +1,6 @@
 require 'mysql2'
 
-SCHEDULER.every '2s', :first_in => 0 do |job|
+SCHEDULER.every '15m', :first_in => 0 do |job|
 
 	connection =  Mysql2::Client.new(:host => "localhost", :port => 3306, :username => "cucumberuser", :password => "sogeti", :database => "cucumber")
 	results1 = connection.query("SELECT COUNT(str.passed) As NumTestsPassed FROM scenario_test_runs str, `time` ti WHERE str.passed  = 1 AND str.test_run_at BETWEEN ti.starttime AND ti.endtime")
