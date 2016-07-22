@@ -1,6 +1,6 @@
 require 'mysql2'
 
-SCHEDULER.every '2s', :first_in => 0 do |job|
+SCHEDULER.every '15m', :first_in => 0 do |job|
 
 	connection =  Mysql2::Client.new(:host => "localhost", :port => 3306, :username => "cucumberuser", :password => "sogeti", :database => "cucumber")
 	results = connection.query("SELECT str.id AS ID, s.scenario_name AS Name, str.passed As PassedFailed, s.failure_rate AS FailureRate  FROM `scenario_test_runs` str, `time` ti, `scenarios` s WHERE  s.id = str.scenario_id AND str.test_run_at BETWEEN ti.starttime AND ti.endtime ORDER BY ti.endtime DESC LIMIT 1")
