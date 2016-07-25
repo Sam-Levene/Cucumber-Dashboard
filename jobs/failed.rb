@@ -9,7 +9,6 @@ SCHEDULER.every '15m', :first_in => 0 do |job|
 	myItems = results.map do |row|
 
 		row = {
-			:label => row['ID'],
 			:value => "File: " << row['File'] << " Scenario: " << row['Scenario'] << " Failed Step: " << row['FailedStep']
 		}
 	end
