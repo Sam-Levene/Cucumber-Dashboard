@@ -1,24 +1,19 @@
-<script type='text/javascript'>
- $(function() {
-   Dashing.gridsterLayout('[{"col":1,"row":1,"size_x":4,"size_y":1},{"col":1,"row":2,"size_x":2,"size_y":1},{"col":1,"row":3,"size_x":2,"size_y":1},{"col":3,"row":3,"size_x":2,"size_y":1},{"col":3,"row":2,"size_x":2,"size_y":1}]')
- });
- </script>
 <% content_for :title do %>Cucumber Dashboard<% end %>
 <div class="gridster">
   <ul>
-      <li data-row="1" data-col="1" data-sizex="4" data-sizey="1">
-      <div data-id="sogeti-image" data-view="Image" data-image="/BigSogetiStudio.png" data-title="sogeti"></div>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="sogeti-image" data-view="Image" data-image="/ThreeLogo.png" data-title="sogeti"></div>
     </li>
-      <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-        <div data-id="welcome" data-view="Text" data-title="Welcome to the Sogeti Studio Dashboard" data-text="We are currently displaying test results from Cucumber framework running every 15 minutes" ></div>
+      <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
+        <div data-id="welcome" data-view="Text" data-title="Welcome to the H3G Dashboard" data-text="We are currently displaying test results from Cucumber framework running every 15 minutes" ></div>
      </li>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
       <div data-id="real-data" data-view="List" data-unordered="true" data-title="Cucumber Results"><div>
     </li>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
       <div data-id="failed" data-view="List" data-unordered="true" data-title="Failed Scenarios"><div>
     </li>
-    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="synergy3" data-view="Meter" data-title="Tests Passed %" data-height="200" data-width="200" data-min="0" data-max="100" data-suffix=""></div>
     </li>
   </ul>
