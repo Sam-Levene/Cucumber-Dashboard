@@ -1,10 +1,10 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #00864e;
+$background-color:  rgba(255, 255, 255, 0.7);
 
-$title-color:       rgba(255, 255, 255, 0.7);
-$moreinfo-color:    rgba(255, 255, 255, 0.7);
+$title-color:       #003768;
+$moreinfo-color:    #003768;
 
 $meter-background:  darken($background-color, 15%);
 
@@ -17,7 +17,7 @@ $meter-background:  darken($background-color, 15%);
 
   input.meter {
     background-color: $meter-background;
-    color: #fff;
+    color: #003768;
   }
 
   .title {
@@ -29,7 +29,7 @@ $meter-background:  darken($background-color, 15%);
   }
 
   .updated-at {
-    color: rgba(255, 255, 255, 0.7);
+    color: #003768;
   }
 
 }

@@ -13,7 +13,7 @@ SCHEDULER.every '2s', :first_in => 0 do |job|
 		end
 
 		row = {
-			:value => "Scenario Name: " << row['Name'].to_s << "\n Test Passed/Failed: " << passorfail << "\n Failure Rate: " << row['FailureRate'].to_s << "%"
+			:value => "Scenario: " << row['Name'].to_s << "; Test Passed/Failed: " << passorfail << "; Failure Rate: " << row['FailureRate'].to_s << "%"
 		}
 	end
 
