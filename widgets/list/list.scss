@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  rgba(255, 255, 255, 0.7);
+$background-color:  rgba(200, 200, 200, 0.7);
 $value-color:       #003768;
 
 $title-color:       #003768;
@@ -43,7 +43,7 @@ $moreinfo-color:    #003768;
   }
 
   .value {
-    float: right;
+    float: left;
     margin-left: 12px;
     font-weight: 600;
     color: $value-color;
